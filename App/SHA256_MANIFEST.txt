@@ -1,0 +1,5 @@
+# PANICORE 0.11.6.2 source integrity manifest
+b25d0064dd2f2b530926f0bc552a3e6b0e6a8ed305f4ae2bc11231f967b8ee28  Verify_PowerShell.ps1
+ad7da2c229f42ff3c2c054b1cb9e13df6423ee54468101da642277a0fc23358f  Portable_Controller.ps1
+6abaabe96b36b1f42943512f5f877b8ff232b2f29e711cd467f40cece9f5d7e0  Radar_View.ps1
+4ccf4c512be8bde2d1717cc5f738657db2d2fca4f75e65ced59079c797d7bc98  Mods/PanicoreHostControl/Scripts/main.lua

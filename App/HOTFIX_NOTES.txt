@@ -1,0 +1,37 @@
+PANICORE Controller v0.11.6.2 - Quiet windows and report hotfix
+
+PREVIOUS FAILURE RESOLVED:
+- v0.11.6 failed before loading because main.lua had a UTF-8 BOM.
+- v0.11.6.1 removed that BOM; retained unchanged here.
+
+THREE COMMANDS:
+- START_HERE.cmd: verify, install missing components and run the game.
+- Uninstall.cmd: remove only verified controller-owned game-side files,
+  leaving saves, game files and unrelated mods untouched.
+- Generate_Report.cmd: create/reuse a single ZIP in Reports. Works even
+  when the mod fails to load; does not run the game or upload data.
+
+WINDOWS:
+- Explicitly disables UE4SS's external developer console and GUI console
+  in the private portable UE4SS-settings.ini, with UE4SS.log preserved.
+- Starts radar PowerShell as a no-console background process, while allowing
+  the actual F5 radar window to display. This avoids blank auxiliary consoles.
+- START_HERE remains visible to display errors and clean up when the game exits.
+  Steam and PANICORE may show their own windows, outside our control.
+
+REPORTS:
+- Setup and loader errors are included in report fingerprinting; the latest
+  report will not silently be replaced by an unrelated old successful report.
+- Only one upload ZIP is created per distinct capture. Internal logs live in
+  Reports/Current; no additional report TXT is placed at the Reports root.
+- The diagnostics can contain identifying paths or crash dump data: review
+  before sharing. Nothing uploads automatically.
+
+UNALTERED:
+- The original v0.11.6 gameplay Lua (minus the v0.11.6 UTF-8 BOM), 0.11.6
+  performance budget and v0.11.5 radar range/zoom behavior are unchanged.
+- Pinned UE4SS DLL and loader SHA256 values unchanged.
+
+TEST LIMITS:
+Verified Lua 5.4 parsing, package integrity, source checks and isolated
+static regression tests. Could not run Windows PowerShell or PANICORE here.
