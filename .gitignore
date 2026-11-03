@@ -1,0 +1,13 @@
+# Run-generated and machine-specific state
+**/Runtime/
+**/Reports/
+**/Downloads/
+**/State/
+**/Work_UE4SS_Extracted/
+**/Cache/
+*.log
+*.dmp
+*.runtime-xml
+*.ini.bak
+PHC_*.zip
+__pycache__/
